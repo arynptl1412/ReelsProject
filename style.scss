@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+html, body {
+    height: 100vh;
+    width: 100%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right bottom ,rgb(26,26,26), rgb(30,30,30) 60%, black);
+    padding: 20px;
+
+    section{
+        margin: auto;
+        height: 100%;
+        width: 375px;
+        background-color: black;
+        border-radius: 20px;
+        ::-webkit-scrollbar{
+            display: none;
+        }
+        
+        .allReels{
+            height: 100%;
+            width: 100%;
+            overflow: auto;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+
+            .reel{
+                height: 100%;
+                width: 100%;
+                position: relative;
+                background-color: lightcoral;
+                overflow: hidden;
+                border-radius: 20px;
+                margin-bottom: 10px;
+                scroll-snap-align: start;
+                scroll-snap-stop: always;
+                
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                .bottom{
+                    width: 100%;
+                    padding: 30px 20px;
+                    background: linear-gradient(transparent 70%, rgb(0, 0, 0));
+                    position: absolute;
+                    bottom: 0%;
+                    color: white;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+
+                    .user{
+                        height: 30px;
+                        width: 100%;
+                        overflow: hidden;
+                        display: flex;
+                        gap: 1rem;
+                        align-items: center;
+
+                        img{
+                            height: 30px;
+                            width: 30px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                        }
+
+                        h4{
+                            color: white;
+                            font-size: 1.2rem;
+                        }
+
+                        button{
+                            padding: 0.1rem 0.4rem;
+                            color: white;
+                            background-color: transparent;
+                            border: solid white 1px;
+                            border-radius: 8px;
+                        }
+                    }
+                }
+
+                .panel{
+                    padding: 10px;
+                    color: white;
+                    position: absolute;
+                    right: 0;
+                    bottom: 10%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1rem;
+                    font-size: 1.7rem;
+                    font-weight: 100;
+
+                    div{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}
